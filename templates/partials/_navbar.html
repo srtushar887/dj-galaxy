@@ -29,14 +29,16 @@
                         <li><a href="lending.html">About Us</a></li>
                         {% for maincat in maincategory %}
                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >{{maincat.name}}</a>
-                            {% if subcategory %}
+                            <a href="{{ maincat.id }}" class="dropdown-toggle" data-toggle="dropdown" >{{maincat.name}}</a>
+
                             <ul class="dropdown-menu">
-                                {% for subcat in subcategory.main_category.all %}
-                                    <li><a href="buy.html">{{subcat.name}}</a></li>
+                                {% for subcat in subcategory %}
+                                    {% if subcat.main_category == maincat %}
+                                        <li><a href="buy.html">{{subcat.name}}</a></li>
+                                    {% endif %}
                                 {% endfor %}
                             </ul>
-                            {% endif %}
+
 
                         </li>
                         {% endfor %}
