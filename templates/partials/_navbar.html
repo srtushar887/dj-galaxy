@@ -1,52 +1,31 @@
 {% load static %}
-<nav class="navbar navbar-default navbar-fixed navbar-transparent bootsnav">
-            <!-- Start Top Search -->
-            <div class="top-search">
-                <div class="container">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-                    </div>
-                </div>
-            </div>
-            <!-- End Top Search -->
-            <div class="container">
-                <!-- Start Atribute Navigation -->
-                <!-- End Atribute Navigation -->
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index-2.html"><img src="{% static '/' %}/img/logo.png" class="logo" alt=""></a>
-                </div>
-                <!-- End Header Navigation -->
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav" data-in="" data-out="">
-                        <li class="active"><a href="index-2.html">Home</a></li>
-                        <li><a href="lending.html">About Us</a></li>
-                        {% for maincat in maincategory %}
-                         <li class="dropdown">
-                            <a href="{{ maincat.id }}" class="dropdown-toggle" data-toggle="dropdown" >{{maincat.name}}</a>
+<nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
 
-                            <ul class="dropdown-menu">
-                                {% for subcat in subcategory %}
-                                    {% if subcat.main_category == maincat %}
-                                        <li><a href="buy.html">{{subcat.name}}</a></li>
-                                    {% endif %}
-                                {% endfor %}
-                            </ul>
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    {% for maincat in maincategory %}
+                                    <li class="dropdown"><a href="#">About Us</a>
+                                    	<ul>
+                                            {% for subcat in subcategory %}
+                                                {% if subcat.main_category == maincat %}
+                                                    <li><a href="about.html">{{subcat.name}}</a></li>
+                                                 {% endif %}
+                                            {% endfor %}
 
+                                        </ul>
+                                    </li>
+                                    {% endfor %}
 
-                        </li>
-                        {% endfor %}
-
-
-
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div>
-        </nav>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                 </ul>
+                            </div>
+                        </nav>
