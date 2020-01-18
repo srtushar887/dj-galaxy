@@ -1,1 +1,1 @@
-web: gunicorn galaxy.wsgi --log-file -
+web: gunicorn globalit.wsgi --log-file -
