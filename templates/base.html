@@ -5,7 +5,7 @@
 <!-- Mirrored from t.commonsupport.com/consultox/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Jan 2020 07:15:41 GMT -->
 <head>
 <meta charset="utf-8">
-<title>Consultox | Consulting Firm  HTML Template | Homepage One</title>
+<title>{% block title %}{% endblock %}</title>
 <!-- Stylesheets -->
 <link href="{% static '/' %}/css/bootstrap.css" rel="stylesheet">
 <link href="{% static '/' %}/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
@@ -21,6 +21,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="{% static '/' %}/js/respond.js"></script><![endif]-->
+
+<script src="https://kit.fontawesome.com/ce870e4a39.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,92 +33,7 @@
     <div class="preloader"></div>
 
     <!-- Main Header-->
-    <header class="main-header">
 
-    	<!-- Header Top -->
-    	<div class="header-top">
-        	<div class="auto-container">
-            	<div class="clearfix">
-
-                    <!--Top Left-->
-                    <div class="top-left">
-                    	<ul class="links clearfix">
-                        	<li><a href="#"><span class="icon flaticon-technology-1"></span>1800.879.5247</a></li>
-                            <li><a href="#"><span class="icon flaticon-message"></span>info@consultox.com</a></li>
-                        </ul>
-                    </div>
-
-                    <!--Top Right-->
-                    <div class="top-right clearfix">
-                    	<!--social-icon-->
-                        <div class="social-icon">
-                        	<ul class="clearfix">
-                            	<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                                <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                            </ul>
-                        </div>
-                        <!--Language-->
-                        <div class="language dropdown"><a class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">En &nbsp;<span class="icon fa fa-caret-down"></span></a>
-                        	<ul class="dropdown-menu style-one" aria-labelledby="dropdownMenu2">
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">German</a></li>
-                                <li><a href="#">Arabic</a></li>
-                                <li><a href="#">Hindi</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <!-- Header Top End -->
-
-        <!-- Main Box -->
-    	<div class="main-box">
-        	<div class="auto-container">
-            	<div class="outer-container clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="{% static '/' %}/images/logo.png" alt=""></a></div>
-                    </div>
-
-                    <!--Nav Outer-->
-                    <div class="nav-outer clearfix">
-
-                        <!-- Main Menu -->
-                        {% include 'partials/_navbar.html' %}
-                        <!-- Main Menu End-->
-
-                        <!--Search Box-->
-                        <div class="search-box-outer">
-                            <div class="dropdown">
-                                <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                                <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                    <li class="panel-outer">
-                                        <div class="form-container">
-                                            <form method="post" action="http://t.commonsupport.com/consultox/blog.html">
-                                                <div class="form-group">
-                                                    <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                    <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--Nav Outer End-->
-
-            	</div>
-            </div>
-        </div>
-
-    </header>
     <!--End Main Header -->
         {% block content %}
         
@@ -251,7 +168,9 @@
 <script src="{% static '/' %}/js/wow.js"></script>
 <script src="{% static '/' %}/js/appear.js"></script>
 <script src="{% static '/' %}/js/script.js"></script>
+{% block js %}
 
+{% endblock %}
 </body>
 
 <!-- Mirrored from t.commonsupport.com/consultox/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Jan 2020 07:18:37 GMT -->

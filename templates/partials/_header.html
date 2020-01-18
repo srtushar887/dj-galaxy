@@ -1,0 +1,94 @@
+{% load static %}
+
+<header class="main-header" >
+
+    	<!-- Header Top -->
+    	<div class="header-top" style="background-color: {{ general_setting.header_background_color }}">
+        	<div class="auto-container">
+            	<div class="clearfix">
+
+                    <!--Top Left-->
+                    <div class="top-left">
+                    	<ul class="links clearfix">
+                        	<li><a href="#"><span class="icon flaticon-technology-1"></span>{{ general_setting.phone_number }}</a></li>
+                            <li><a href="#"><span class="icon flaticon-message"></span>{{ general_setting.site_email }}</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Top Right-->
+                    <div class="top-right clearfix">
+                    	<!--social-icon-->
+                        <div class="social-icon">
+                            <ul class="clearfix">
+                                {% for icon in icons %}
+                                    <li><a href="{{ icon.icon_link }}" target="_blank"><i class="{{ icon.icon_code }}"></i> </a></li>
+
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                        <!--Language-->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Header Top End -->
+
+        <!-- Main Box -->
+    	<div class="main-box">
+        	<div class="auto-container">
+            	<div class="outer-container clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html"><img src="{{ general_setting.site_logo.url }}" style="height: 80px;width: 110px;margin-top: -12px" alt=""></a></div>
+                    </div>
+
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    {% for maincat in maincategory %}
+                                    <li class="dropdown"><a href="#">{{ maincat.name }}</a>
+                                    	<ul>
+                                            {% for subcat in subcategory %}
+                                                {% if subcat.main_category == maincat %}
+                                                    <li><a href="{% url 'category' subcat.slug subcat.id %}">{{subcat.name}}</a></li>
+                                                 {% endif %}
+                                            {% endfor %}
+
+                                        </ul>
+                                    </li>
+                                    {% endfor %}
+
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+                                 </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+
+                        <!--Search Box-->
+
+
+                    </div>
+                    <!--Nav Outer End-->
+
+            	</div>
+            </div>
+        </div>
+
+    </header>

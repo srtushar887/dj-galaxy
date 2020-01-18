@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+    {% include 'partials/_header.html' %}
  <section class="page-title" style="background-image:url({{ pageContent.page_image.url }})">
     	<div class="auto-container">
         	<h1>{{ pageContent.title }}</h1>

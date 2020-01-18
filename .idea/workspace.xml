@@ -8,7 +8,10 @@
       <change beforePath="$PROJECT_DIR$/globalit/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/globalit/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagecontent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/pagecontent/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagecontent/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pagecontent/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/categoryPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/categoryPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +101,7 @@
       <workItem from="1578827835141" duration="4382000" />
       <workItem from="1579255536306" duration="7651000" />
       <workItem from="1579272026984" duration="642000" />
-      <workItem from="1579327994502" duration="8484000" />
+      <workItem from="1579327994502" duration="15839000" />
     </task>
     <servers />
   </component>
@@ -110,5 +113,20 @@
       <screen x="1366" y="0" width="1360" height="768" />
     </state>
     <state x="1535" y="22" width="1022" height="735" key="SettingsEditor/0.0.1366.742/1366.0.1360.768@1366.0.1360.768" timestamp="1578827874386" />
+    <state x="1709" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579347655565">
+      <screen x="1366" y="0" width="1360" height="768" />
+    </state>
+    <state x="1709" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.742/1366.0.1360.768@1366.0.1360.768" timestamp="1579347655565" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/partials/_header.html</url>
+          <line>44</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -10,6 +10,10 @@ class generalSetting(models.Model):
     site_email = models.CharField(max_length=50)
     site_logo = models.ImageField(upload_to='photos/%Y/%m/%d',blank=True)
     site_icon = models.ImageField(upload_to='photos/%Y/%m/%d',blank=True)
+    address = models.TextField(blank=True)
+    phone_number = models.CharField(max_length=100,blank=True)
+    header_background_color = models.CharField(max_length=100,blank=True)
+    footer_background_color = models.CharField(max_length=100,blank=True)
 
     def __str__(self):
         return self.site_title
@@ -33,3 +37,12 @@ class CategroyPageContent(models.Model):
 
     def __str__(self):
         return self.sub_category.name
+
+
+class icon(models.Model):
+    icon_name = models.CharField(max_length=100,blank=True)
+    icon_link = models.CharField(max_length=100,blank=True)
+    icon_code = models.CharField(max_length=100,blank=True)
+
+    def __str__(self):
+        return self.icon_name

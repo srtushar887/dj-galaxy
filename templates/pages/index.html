@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% block title %}
+{{ general_setting.site_title }}
+{% endblock %}
 {% load static %}
 {% block content %}
-    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_header.html' %}
 
     <!--Main Slider-->
     <section class="main-slider">
