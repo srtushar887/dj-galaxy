@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <section class="page-title" style="background-image:url({{ pageContent.page_image.url }})">
+    	<div class="auto-container">
+        	<h1>{{ pageContent.title }}</h1>
+            <ul class="page-breadcrumb">
+            	<li><a href="{% url 'index' %}">Home</a></li>
+                <li>{{ pageContent.title }}</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!--Gallery Single Section-->
+    <section class="gallery-single">
+    	<div class="auto-container">
+        	<div class="inner-container">
+                <div class="lower-content">
+
+                	<!--Upper Box-->
+                	<div class="upper-box">
+                        <div class="text">
+                        	{{ pageContent.content | safe }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Gallery Section-->
+
+{% endblock %}

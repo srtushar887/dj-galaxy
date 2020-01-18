@@ -13,11 +13,11 @@
                                 <ul class="navigation clearfix">
                                     <li><a href="{% url 'index' %}">Home</a></li>
                                     {% for maincat in maincategory %}
-                                    <li class="dropdown"><a href="#">About Us</a>
+                                    <li class="dropdown"><a href="#">{{ maincat.name }}</a>
                                     	<ul>
                                             {% for subcat in subcategory %}
                                                 {% if subcat.main_category == maincat %}
-                                                    <li><a href="about.html">{{subcat.name}}</a></li>
+                                                    <li><a href="{% url 'category' subcat.slug subcat.id %}">{{subcat.name}}</a></li>
                                                  {% endif %}
                                             {% endfor %}
 
