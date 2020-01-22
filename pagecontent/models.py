@@ -20,9 +20,11 @@ class generalSetting(models.Model):
 
 
 class homeSlider(models.Model):
-    image =  models.ImageField(upload_to='photos/%Y/%m/%d',blank=True)
+    image = models.ImageField(upload_to='photos/%Y/%m/%d',blank=True)
     title = models.CharField(max_length=200)
     sort_description = models.TextField(blank=True)
+    title_color = models.CharField(max_length=100,blank=True)
+    description_color = models.CharField(max_length=100,blank=True)
 
     def __str__(self):
         return self.title
@@ -46,3 +48,6 @@ class icon(models.Model):
 
     def __str__(self):
         return self.icon_name
+
+
+
