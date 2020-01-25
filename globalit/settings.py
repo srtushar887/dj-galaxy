@@ -86,11 +86,8 @@ WSGI_APPLICATION = 'globalit.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'galaxy',
-        'USER' : 'postgres',
-        'PASSWORD' : '12345678',
-        'HOST' : 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
